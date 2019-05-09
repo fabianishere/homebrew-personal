@@ -1,4 +1,6 @@
-# Homebrew Personal
+Homebrew Personal
+[![Build Status](https://travis-ci.com/fabianishere/homebrew-personal.svg?branch=master)](https://travis-ci.com/fabianishere/homebrew-personal)
+=================
 A repository containing personal Homebrew recipes not (yet) available in the official
 repositories.
 
