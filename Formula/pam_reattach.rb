@@ -10,8 +10,10 @@ class PamReattach < Formula
   depends_on "cmake" => :build
 
   def install
+    ENV.permit_arch_flags
     args = std_cmake_args
     args << "-DENABLE_CLI=ON" if build.with? "cli"
+    args << "-DCMAKE_OSX_ARCHITECTURES=arm64;x86_64" if Hardware::CPU.arm?
 
     system "cmake", ".", *args
     system "make", "install"
